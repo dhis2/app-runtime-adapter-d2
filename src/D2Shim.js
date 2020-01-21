@@ -11,5 +11,5 @@ export const D2Shim = ({ children, onInitialized, d2Config }) => {
 D2Shim.propTypes = {
     onInitialized: PropTypes.func,
     d2Config: PropTypes.object,
-    children: PropTypes.func
+    children: PropTypes.func.isRequired
 }
