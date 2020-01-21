@@ -96,6 +96,8 @@ const MyApp = () => (
       )}
   </D2Shim>
 )
+
+export default MyApp
 ```
 
 Both accept two options:
