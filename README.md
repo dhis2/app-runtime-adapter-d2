@@ -4,7 +4,10 @@ Support [`d2`](https://github.com/dhis2/d2) and [`d2-ui`](https://github.com/dhi
 
 ## Requirements
 
-The following 
+Ths library has two peer dependencies:
+
+* [`d2`](https://www.npmjs.com/package/d2)
+* [`@dhis2/app-runtime`](https://www.npmjs.com/package/@dhis2/app-runtime)
 
 ## Initializing D2
 
