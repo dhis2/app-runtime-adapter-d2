@@ -1,0 +1,25 @@
+{
+  "name": "@dhis2/app-runtime-d2-shim",
+  "version": "1.0.0",
+  "description": "",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "main": "build/cjs/lib.js",
+  "module": "build/es/lib.js",
+  "scripts": {
+    "build": "d2-app-scripts build",
+    "start": "d2-app-scripts start",
+    "test": "d2-app-scripts test"
+  },
+  "devDependencies": {
+    "@dhis2/cli-app-scripts": "^3.2.2"
+  },
+  "dependencies": {
+    "@dhis2/ui-core": "^4.6.1",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "@dhis2/app-runtime": "^2.0.4",
+    "d2": "^31.8.1"
+  }
+}
