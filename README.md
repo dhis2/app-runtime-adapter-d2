@@ -1,4 +1,4 @@
-# app-runtime-d2-shim
+# app-runtime-adapter-d2
 
 Support [`d2`](https://github.com/dhis2/d2) and [`d2-ui`](https://github.com/dhis2/d2-ui) components in [DHIS2 Platform](https://platform.dhis2.nu) applications
 
@@ -17,7 +17,7 @@ There are two entrypoints to support initialization and access to the `d2` singl
 
 ```js
 import React, { useState } from 'react'
-import { useD2 } from '@dhis2/app-runtime-d2-shim'
+import { useD2 } from '@dhis2/app-runtime-adapter-d2'
 import { getUserSettings } from 'd2'
 
 const d2Config = {
@@ -52,7 +52,7 @@ export default MyApp
 
 ```js
 import React, { useState } from 'react'
-import { useD2 } from '@dhis2/app-runtime-d2-shim'
+import { useD2 } from '@dhis2/app-runtime-adapter-d2'
 import { getUserSettings } from 'd2'
 import { ScreenCover, CircularLoader } from '@dhis2/ui-core';
 import Root from './components/Root' // This is the business logic of the application
