@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { init as d2Init, config as d2Config, getUserSettings } from 'd2'
+import { init as initD2, config as d2Config, getUserSettings } from 'd2'
 import { useConfig } from '@dhis2/app-runtime'
 
 let theD2 = null
@@ -25,7 +25,7 @@ const init = async ({ appUrl, baseUrl, appConfig }) => {
     await configI18n(baseUrl, i18nRoot)
   }
 
-  return await d2Init({
+  return await initD2({
     appUrl,
     baseUrl,
     ...initConfig,
