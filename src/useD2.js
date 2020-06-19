@@ -1,26 +1,24 @@
 import { useState, useEffect } from 'react'
-import { init as initD2, config as d2Config, getUserSettings } from 'd2'
+import { init as initD2, config, getUserSettings } from 'd2'
 import { useConfig } from '@dhis2/app-runtime'
 
 let theD2 = null
 
 const configI18n = async (baseUrl, i18nRoot) => {
-  d2Config.baseUrl = baseUrl
+  config.baseUrl = baseUrl
 
   const settings = await getUserSettings()
 
   if (settings.keyUiLocale && settings.keyUiLocale !== 'en') {
-    await d2Config.i18n.sources.add(
+    await config.i18n.sources.add(
       `${i18nRoot}/i18n_module_${settings.keyUiLocale}.properties`
     )
   }
 
-  await d2Config.i18n.sources.add('${i18nRoot}/i18n_module_en.properties')
+  await config.i18n.sources.add('${i18nRoot}/i18n_module_en.properties')
 }
 
-const init = async ({ appUrl, baseUrl, appConfig }) => {
-  const { i18nRoot, ...initConfig } = appConfig
-
+const init = async ({ appUrl, baseUrl, d2Config, i18nRoot = null }) => {
   if (i18nRoot) {
     await configI18n(baseUrl, i18nRoot)
   }
@@ -28,13 +26,14 @@ const init = async ({ appUrl, baseUrl, appConfig }) => {
   return await initD2({
     appUrl,
     baseUrl,
-    ...initConfig,
+    ...d2Config,
   })
 }
 
 export const useD2 = ({
-  appConfig = {},
+  d2Config = {},
   onInitialized = Function.prototype,
+  i18nRoot,
 }) => {
   const { baseUrl, apiVersion } = useConfig()
   const [d2, setD2] = useState(theD2)
@@ -45,7 +44,8 @@ export const useD2 = ({
       init({
         appUrl: baseUrl,
         baseUrl: `${baseUrl}/api/${apiVersion}`,
-        appConfig,
+        d2Config,
+        i18nRoot
       })
         .then(async (d2) => {
           await onInitialized(d2)
