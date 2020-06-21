@@ -10,12 +10,12 @@ const configI18n = async (baseUrl, i18nRoot) => {
   const settings = await getUserSettings()
 
   if (settings.keyUiLocale && settings.keyUiLocale !== 'en') {
-    await config.i18n.sources.add(
+    config.i18n.sources.add(
       `${i18nRoot}/i18n_module_${settings.keyUiLocale}.properties`
     )
   }
 
-  await config.i18n.sources.add('${i18nRoot}/i18n_module_en.properties')
+  config.i18n.sources.add('${i18nRoot}/i18n_module_en.properties')
 }
 
 const init = async ({ appUrl, baseUrl, d2Config, i18nRoot = null }) => {
