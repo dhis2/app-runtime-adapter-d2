@@ -1,4 +1,3 @@
-import React from 'react'
 import * as PropTypes from 'prop-types'
 import { useD2 } from './useD2'
 
@@ -9,8 +8,8 @@ export const D2Shim = ({ children, onInitialized, d2Config, i18nRoot }) => {
 }
 
 D2Shim.propTypes = {
-    onInitialized: PropTypes.func,
-    d2Config: PropTypes.object,
     children: PropTypes.func.isRequired,
-    i18nRoot: PropTypes.string
+    d2Config: PropTypes.object,
+    i18nRoot: PropTypes.string,
+    onInitialized: PropTypes.func,
 }
