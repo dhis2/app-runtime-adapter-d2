@@ -15,10 +15,13 @@
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^3.2.2",
-        "@dhis2/cli-style": "^7.0.0"
+        "@dhis2/cli-style": "^7.0.0",
+        "@testing-library/react-hooks": "^3.4.1",
+        "react-test-renderer": "^16.13.1"
     },
     "dependencies": {
         "@dhis2/ui-core": "^4.6.1",
+        "d2": "^31.8.1",
         "prop-types": "^15.7.2"
     },
     "peerDependencies": {

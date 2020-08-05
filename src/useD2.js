@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { init as initD2, config, getUserSettings } from 'd2'
+import { init, config, getUserSettings } from 'd2'
 import { useConfig } from '@dhis2/app-runtime'
 
 let theD2 = null
@@ -18,12 +18,12 @@ const configI18n = async (baseUrl, i18nRoot) => {
     config.i18n.sources.add('${i18nRoot}/i18n_module_en.properties')
 }
 
-const init = async ({ appUrl, baseUrl, d2Config, i18nRoot = null }) => {
+const initD2 = async ({ appUrl, baseUrl, d2Config, i18nRoot = null }) => {
     if (i18nRoot) {
         await configI18n(baseUrl, i18nRoot)
     }
 
-    return await initD2({
+    return await init({
         appUrl,
         baseUrl,
         ...d2Config,
@@ -41,7 +41,7 @@ export const useD2 = ({
 
     useEffect(() => {
         if (!theD2) {
-            init({
+            initD2({
                 appUrl: baseUrl,
                 baseUrl: `${baseUrl}/api/${apiVersion}`,
                 d2Config,
