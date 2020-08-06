@@ -24,7 +24,7 @@ describe('useD2', () => {
 
         const { result, waitForNextUpdate } = renderHook(() =>
             useD2({
-                d2Config: {},
+                d2Config: { schemas: ['schema1'] },
                 onInitialized: mockOnInit,
                 i18nRoot: 'i18n_old',
             })
@@ -48,6 +48,7 @@ describe('useD2', () => {
         expect(initSpy).toHaveBeenCalledWith({
             appUrl: 'baseurl',
             baseUrl: 'baseurl/api/42',
+            schemas: ['schema1'],
         })
 
         expect(spy).toHaveBeenCalledWith('i18n_old/i18n_module_no.properties')
