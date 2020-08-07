@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`D2Shim returns a component with children passed in 1`] = `
+exports[`D2Shim returns a component with children passed in 1`] = `null`;
+
+exports[`D2Shim returns a component with children passed in 2`] = `
 <div
   d2="d2obj"
-  title="the-div"
 />
 `;
