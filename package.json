@@ -3,9 +3,16 @@
     "version": "1.0.0",
     "description": "",
     "license": "BSD-3-Clause",
-    "private": true,
     "main": "build/cjs/lib.js",
     "module": "build/es/lib.js",
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": [
+        "./src/index.js"
+    ],
+    "repository": "git@github.com:dhis2/app-runtime-adapter-d2.git",
     "scripts": {
         "build": "d2-app-scripts build",
         "start": "d2-app-scripts start",
@@ -29,6 +36,8 @@
     },
     "peerDependencies": {
         "@dhis2/app-runtime": "^2.0.4",
-        "d2": "^31.8.1"
+        "d2": "^31.8.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
     }
 }
