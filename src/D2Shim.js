@@ -4,8 +4,6 @@ import { useD2 } from './useD2'
 export const D2Shim = ({ children, onInitialized, d2Config, i18nRoot }) => {
     const { d2, d2Error } = useD2({ onInitialized, d2Config, i18nRoot })
 
-    console.log('*** d2', d2)
-
     return children({ d2, d2Error })
 }
 
