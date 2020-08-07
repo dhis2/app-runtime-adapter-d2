@@ -31,11 +31,11 @@
     },
     "dependencies": {
         "@dhis2/ui-core": "^4.6.1",
+        "d2": "^31",
         "prop-types": "^15.7.2"
     },
     "peerDependencies": {
         "@dhis2/app-runtime": "^2",
-        "d2": "^31",
         "react": "^16.8",
         "react-dom": "^16.8"
     }
