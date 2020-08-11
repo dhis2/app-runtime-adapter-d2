@@ -23,7 +23,7 @@
         "react-test-renderer": "^16.13.1"
     },
     "dependencies": {
-        "@dhis2/ui-core": "^4.6.1",
+        "@dhis2/ui-core": "^5.3.1",
         "d2": "^31.8.1",
         "prop-types": "^15.7.2"
     },
