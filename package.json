@@ -3,9 +3,14 @@
     "version": "1.0.0",
     "description": "",
     "license": "BSD-3-Clause",
-    "private": true,
     "main": "build/cjs/lib.js",
     "module": "build/es/lib.js",
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": false,
+    "repository": "git@github.com:dhis2/app-runtime-adapter-d2.git",
     "scripts": {
         "build": "d2-app-scripts build",
         "start": "d2-app-scripts start",
@@ -19,16 +24,18 @@
         "@testing-library/jest-dom": "^5.11.2",
         "@testing-library/react": "^10.4.8",
         "@testing-library/react-hooks": "^3.4.1",
+        "d2": "^31.8.1",
         "mutation-observer": "^1.0.3",
-        "react-test-renderer": "^16.13.1"
+        "react-test-renderer": "^16.8"
     },
     "dependencies": {
         "@dhis2/ui-core": "^4.6.1",
-        "d2": "^31.8.1",
         "prop-types": "^15.7.2"
     },
     "peerDependencies": {
-        "@dhis2/app-runtime": "^2.0.4",
-        "d2": "^31.8.1"
+        "@dhis2/app-runtime": "^2",
+        "d2": ">30",
+        "react": "^16.8",
+        "react-dom": "^16.8"
     }
 }
