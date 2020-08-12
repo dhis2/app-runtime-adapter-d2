@@ -26,7 +26,7 @@
         "@testing-library/jest-dom": "^5.11.2",
         "@testing-library/react": "^10.4.8",
         "@testing-library/react-hooks": "^3.4.1",
-        "d2": "^31",
+        "d2": ">30",
         "mutation-observer": "^1.0.3",
         "react-test-renderer": "^16.8"
     },
@@ -36,7 +36,7 @@
     },
     "peerDependencies": {
         "@dhis2/app-runtime": "^2",
-        "d2": "^31",
+        "d2": ">30",
         "react": "^16.8",
         "react-dom": "^16.8"
     }
