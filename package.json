@@ -9,9 +9,7 @@
     "publishConfig": {
         "access": "public"
     },
-    "sideEffects": [
-        "./src/index.js"
-    ],
+    "sideEffects": false,
     "repository": "git@github.com:dhis2/app-runtime-adapter-d2.git",
     "scripts": {
         "build": "d2-app-scripts build",
