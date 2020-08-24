@@ -15,7 +15,7 @@ const configI18n = async (baseUrl, i18nRoot) => {
         )
     }
 
-    config.i18n.sources.add('${i18nRoot}/i18n_module_en.properties')
+    config.i18n.sources.add(`${i18nRoot}/i18n_module_en.properties`)
 }
 
 const initD2 = async ({ appUrl, baseUrl, d2Config, i18nRoot = null }) => {
