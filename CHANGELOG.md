@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dhis2/app-runtime-adapter-d2/compare/v1.0.0...v1.0.1) (2020-08-24)
+
+
+### Bug Fixes
+
+* use template string ([#16](https://github.com/dhis2/app-runtime-adapter-d2/issues/16)) ([e2882e1](https://github.com/dhis2/app-runtime-adapter-d2/commit/e2882e1485e51be6294d2ee1b463d70877f98d7e))
+
 # 1.0.0 (2020-08-12)
 
 
