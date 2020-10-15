@@ -4470,10 +4470,10 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-d2@^31.8.1:
-  version "31.8.1"
-  resolved "https://registry.yarnpkg.com/d2/-/d2-31.8.1.tgz#017372001f9c8d3379a74c71c0382c98e9d2fc26"
-  integrity sha512-UpS2gv3DS4Bg7MrQTMNkYv5cXJ0k9jsujgw/p4Ex+el3gzslTf7fTH2n4gIZt42+l1tKmrs/R7yiJPov5Cax3w==
+d2@^31.8.2:
+  version "31.8.2"
+  resolved "https://registry.yarnpkg.com/d2/-/d2-31.8.2.tgz#1b0f47a3686c01ecaa805d3dc44f056626d9baaf"
+  integrity sha512-eRmEf7+OslcdVSF4oFCBFBOwd2FEB8829xNqCz79PK49WkhYIy5c/cwEkwZd2sD5bJyeCyNoi3p4/42wC0AZ1Q==
   dependencies:
     isomorphic-fetch "^2.2.1"
 
