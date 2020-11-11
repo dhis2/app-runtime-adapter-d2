@@ -103,3 +103,15 @@ Both accept three options:
 ## Referencing D2
 
 The same two entrypoints can be used multiple places within an application to reference the `d2` singleton. Once `d2` has been initialized it will not be re-initialized, so you can safely call `useD2` or render `D2Shim` without any arguments further down the VDom tree after rendering `D2Shim` with initialization parameters at the application entrypoint.
+
+## Report an issue
+
+The issue tracker can be found in [DHIS2 JIRA](https://jira.dhis2.org)
+under the [LIBS](https://jira.dhis2.org/projects/LIBS) project.
+
+Deep links:
+
+-   [Bug](https://jira.dhis2.org/secure/CreateIssueDetails!init.jspa?pid=10700&issuetype=10006&components=11026)
+-   [New Feature](https://jira.dhis2.org/secure/CreateIssueDetails!init.jspa?pid=10700&issuetype=10005&components=11026)
+-   [Improvement](https://jira.dhis2.org/secure/CreateIssueDetails!init.jspa?pid=10700&issuetype=10002&components=11026)
+-   [Task](https://jira.dhis2.org/secure/CreateIssueDetails!init.jspa?pid=10700&issuetype=10003&components=11026)
