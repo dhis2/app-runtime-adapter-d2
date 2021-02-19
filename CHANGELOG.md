@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dhis2/app-runtime-adapter-d2/compare/v1.0.1...v1.0.2) (2021-02-19)
+
+
+### Bug Fixes
+
+* make useD2 argument optional ([#67](https://github.com/dhis2/app-runtime-adapter-d2/issues/67)) ([b885fe5](https://github.com/dhis2/app-runtime-adapter-d2/commit/b885fe50e7009a94631a7fe8c21ee74f38e1dcf4))
+
 ## [1.0.1](https://github.com/dhis2/app-runtime-adapter-d2/compare/v1.0.0...v1.0.1) (2020-08-24)
 
 

@@ -1,6 +1,6 @@
 {
     "name": "@dhis2/app-runtime-adapter-d2",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "",
     "license": "BSD-3-Clause",
     "main": "build/cjs/lib.js",
