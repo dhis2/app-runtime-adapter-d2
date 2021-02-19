@@ -34,7 +34,7 @@ export const useD2 = ({
     d2Config = {},
     onInitialized = Function.prototype,
     i18nRoot,
-}) => {
+} = {}) => {
     const { baseUrl, apiVersion } = useConfig()
     const [d2, setD2] = useState(theD2)
     const [d2Error, setError] = useState(undefined)

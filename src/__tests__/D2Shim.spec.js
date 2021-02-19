@@ -1,3 +1,5 @@
+/* eslint-disable no-import-assign,import/namespace */
+
 import React from 'react'
 import { D2Shim } from '../D2Shim'
 import { render } from '@testing-library/react'
