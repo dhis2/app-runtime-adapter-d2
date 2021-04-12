@@ -7,14 +7,12 @@ let theD2 = null
 const configI18n = async (baseUrl, i18nRoot, locale) => {
     config.baseUrl = baseUrl
 
-    if (!locale) {
-        const settings = await getUserSettings()
+    const currentLocale = locale || (await getUserSettings()).keyUiLocale
 
-        locale = settings.keyUiLocale
-    }
-
-    if (locale && locale !== 'en') {
-        config.i18n.sources.add(`${i18nRoot}/i18n_module_${locale}.properties`)
+    if (currentLocale && currentLocale !== 'en') {
+        config.i18n.sources.add(
+            `${i18nRoot}/i18n_module_${currentLocale}.properties`
+        )
     }
 
     config.i18n.sources.add(`${i18nRoot}/i18n_module_en.properties`)
