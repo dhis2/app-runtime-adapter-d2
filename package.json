@@ -29,7 +29,6 @@
         "react-test-renderer": "^16.8"
     },
     "dependencies": {
-        "@dhis2/ui-core": "^4.6.1",
         "prop-types": "^15.7.2"
     },
     "peerDependencies": {
