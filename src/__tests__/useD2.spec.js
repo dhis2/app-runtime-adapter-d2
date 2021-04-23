@@ -59,30 +59,4 @@ describe('useD2', () => {
 
         jest.restoreAllMocks()
     })
-
-    it.skip('sets the language from the given locale', async () => {
-        const initSpy = jest.spyOn(alld2, 'init').mockResolvedValue('d2obj')
-        const userSettingsSpy = jest
-            .spyOn(alld2, 'getUserSettings')
-            .mockResolvedValue({
-                keyUiLocale: 'no',
-            })
-        const spy = jest.spyOn(alld2.config.i18n.sources, 'add')
-
-        const { result, waitForNextUpdate } = renderHook(() =>
-            useD2({
-                d2Config: { schemas: ['schema1'] },
-                i18nRoot: 'i18n_old',
-                locale: 'it',
-            })
-        )
-
-        await waitForNextUpdate()
-
-        expect(userSettingsSpy).toHaveBeenCalledTimes(0)
-
-        expect(spy).toHaveBeenCalledWith('i18n_old/i18n_module_it.properties')
-
-        jest.restoreAllMocks()
-    })
 })
