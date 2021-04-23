@@ -13,7 +13,7 @@ jest.mock('@dhis2/app-runtime', () => {
     }
 })
 
-describe('useD2', () => {
+describe('useD2 with locale', () => {
     it('sets the language from the given locale', async () => {
         const initSpy = jest.spyOn(alld2, 'init').mockResolvedValue('d2obj')
         const userSettingsSpy = jest
