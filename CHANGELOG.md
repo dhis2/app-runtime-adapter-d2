@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dhis2/app-runtime-adapter-d2/compare/v1.0.2...v1.1.0) (2021-04-26)
+
+
+### Features
+
+* allow to pass locale ([#85](https://github.com/dhis2/app-runtime-adapter-d2/issues/85)) ([5ddd32e](https://github.com/dhis2/app-runtime-adapter-d2/commit/5ddd32e464f4280f02cecbc666df832ba3b468db))
+
 ## [1.0.2](https://github.com/dhis2/app-runtime-adapter-d2/compare/v1.0.1...v1.0.2) (2021-02-19)
 
 
