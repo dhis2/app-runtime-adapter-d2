@@ -4,23 +4,29 @@ import { useConfig } from '@dhis2/app-runtime'
 
 let theD2 = null
 
-const configI18n = async (baseUrl, i18nRoot) => {
+const configI18n = async (baseUrl, i18nRoot, locale) => {
     config.baseUrl = baseUrl
 
-    const settings = await getUserSettings()
+    const currentLocale = locale || (await getUserSettings()).keyUiLocale
 
-    if (settings.keyUiLocale && settings.keyUiLocale !== 'en') {
+    if (currentLocale && currentLocale !== 'en') {
         config.i18n.sources.add(
-            `${i18nRoot}/i18n_module_${settings.keyUiLocale}.properties`
+            `${i18nRoot}/i18n_module_${currentLocale}.properties`
         )
     }
 
     config.i18n.sources.add(`${i18nRoot}/i18n_module_en.properties`)
 }
 
-const initD2 = async ({ appUrl, baseUrl, d2Config, i18nRoot = null }) => {
+const initD2 = async ({
+    appUrl,
+    baseUrl,
+    d2Config,
+    i18nRoot = null,
+    locale,
+}) => {
     if (i18nRoot) {
-        await configI18n(baseUrl, i18nRoot)
+        await configI18n(baseUrl, i18nRoot, locale)
     }
 
     return await init({
@@ -34,6 +40,7 @@ export const useD2 = ({
     d2Config = {},
     onInitialized = Function.prototype,
     i18nRoot,
+    locale,
 } = {}) => {
     const { baseUrl, apiVersion } = useConfig()
     const [d2, setD2] = useState(theD2)
@@ -46,6 +53,7 @@ export const useD2 = ({
                 baseUrl: `${baseUrl}/api/${apiVersion}`,
                 d2Config,
                 i18nRoot,
+                locale,
             })
                 .then(async d2 => {
                     await onInitialized(d2)

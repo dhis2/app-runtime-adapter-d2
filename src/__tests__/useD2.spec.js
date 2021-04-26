@@ -16,9 +16,11 @@ jest.mock('@dhis2/app-runtime', () => {
 describe('useD2', () => {
     it('returns the d2 config and sets the language', async () => {
         const initSpy = jest.spyOn(alld2, 'init').mockResolvedValue('d2obj')
-        jest.spyOn(alld2, 'getUserSettings').mockResolvedValue({
-            keyUiLocale: 'no',
-        })
+        const userSettingsSpy = jest
+            .spyOn(alld2, 'getUserSettings')
+            .mockResolvedValue({
+                keyUiLocale: 'no',
+            })
         const spy = jest.spyOn(alld2.config.i18n.sources, 'add')
         const mockOnInit = jest.fn().mockResolvedValue('initialized')
 
@@ -50,6 +52,8 @@ describe('useD2', () => {
             baseUrl: 'baseurl/api/42',
             schemas: ['schema1'],
         })
+
+        expect(userSettingsSpy).toHaveBeenCalledTimes(1)
 
         expect(spy).toHaveBeenCalledWith('i18n_old/i18n_module_no.properties')
 
