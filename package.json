@@ -23,7 +23,7 @@
         "@dhis2/cli-style": "^7.2.0",
         "@testing-library/jest-dom": "^5.11.2",
         "@testing-library/react": "^10.4.8",
-        "@testing-library/react-hooks": "^3.4.1",
+        "@testing-library/react-hooks": "^7.0.1",
         "d2": "^31.8.1",
         "mutation-observer": "^1.0.3",
         "react-test-renderer": "^16.8"
