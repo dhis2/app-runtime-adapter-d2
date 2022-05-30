@@ -55,7 +55,7 @@ export const useD2 = ({
                 i18nRoot,
                 locale,
             })
-                .then(async d2 => {
+                .then(async (d2) => {
                     await onInitialized(d2)
                     theD2 = d2
                     setD2(d2)
