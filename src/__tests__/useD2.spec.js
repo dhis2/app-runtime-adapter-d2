@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks'
 import * as alld2 from 'd2'
-import { useD2 } from '../useD2'
+import { useD2 } from '../useD2.js'
 
 jest.mock('@dhis2/app-runtime', () => {
     return {

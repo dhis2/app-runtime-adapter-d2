@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
-import { init, config, getUserSettings } from 'd2'
 import { useConfig } from '@dhis2/app-runtime'
+import { init, config, getUserSettings } from 'd2'
+import { useState, useEffect } from 'react'
 
 let theD2 = null
 
@@ -62,7 +62,7 @@ export const useD2 = ({
                 })
                 .catch(setError)
         }
-    }, [])
+    }, [apiVersion, baseUrl, d2Config, i18nRoot, locale, onInitialized])
 
     return { d2, d2Error } // d2 is null while loading
 }
