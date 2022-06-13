@@ -1,2 +1,2 @@
-export { D2Shim } from './D2Shim'
-export { useD2 } from './useD2'
+export { D2Shim } from './D2Shim.js'
+export { useD2 } from './useD2.js'

@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks'
 import * as alld2 from 'd2'
-import { useD2 } from '../useD2'
+import { useD2 } from '../useD2.js'
 
 jest.mock('@dhis2/app-runtime', () => {
     return {
@@ -15,7 +15,8 @@ jest.mock('@dhis2/app-runtime', () => {
 
 describe('useD2 with locale', () => {
     it('sets the language from the given locale', async () => {
-        const initSpy = jest.spyOn(alld2, 'init').mockResolvedValue('d2obj')
+        jest.spyOn(alld2, 'init').mockResolvedValue('d2obj')
+
         const userSettingsSpy = jest
             .spyOn(alld2, 'getUserSettings')
             .mockResolvedValue({

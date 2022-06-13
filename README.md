@@ -27,7 +27,7 @@ const d2Config = {
 const MyApp = () => {
     const [userSettings, setUserSettings] = useState(null)
 
-    const onInitialized = d2 => {
+    const onInitialized = (d2) => {
         getUserSettings().then(setUserSettings)
 
         /* ... do other things with d2 ... */
@@ -57,7 +57,7 @@ const d2Config = {
     schemas: ['dataElement', 'program', 'userGroup'],
 }
 
-const onD2Initialized = async d2 => {
+const onD2Initialized = async (d2) => {
     const userSettings = await getUserSettings()
 
     /* do something with userSettings or d2 - spawn Redux initialization actions, for instance */

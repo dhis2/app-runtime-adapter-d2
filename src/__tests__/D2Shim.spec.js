@@ -1,9 +1,9 @@
 /* eslint-disable no-import-assign,import/namespace */
 
-import React from 'react'
-import { D2Shim } from '../D2Shim'
 import { render } from '@testing-library/react'
-import * as useD2 from '../useD2'
+import React from 'react'
+import { D2Shim } from '../D2Shim.js'
+import * as useD2 from '../useD2.js'
 import '@testing-library/jest-dom'
 
 // this polyfill shouldn't be needed once Jest is upgraded to 26
