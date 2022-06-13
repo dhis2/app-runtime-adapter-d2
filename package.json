@@ -29,7 +29,7 @@
         "react-test-renderer": "^16.8"
     },
     "dependencies": {
-        "prop-types": "^15.7.2"
+        "prop-types": "^15.8.1"
     },
     "peerDependencies": {
         "@dhis2/app-runtime": "^2",
