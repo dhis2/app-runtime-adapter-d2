@@ -26,7 +26,7 @@
         "@testing-library/react-hooks": "^3.4.1",
         "d2": "^31.8.1",
         "mutation-observer": "^1.0.3",
-        "react-test-renderer": "^16.8"
+        "react-test-renderer": "^18.2"
     },
     "dependencies": {
         "prop-types": "^15.7.2"
